@@ -50,5 +50,3 @@ Style/HashTransformKeys:
   Enabled: false
 Style/HashTransformValues:
   Enabled: false
-Style/StringLiterals:
-EnforcedStyle: double_quotes
