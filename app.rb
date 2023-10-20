@@ -32,7 +32,8 @@ class App
     parent_permission = gets.chomp.downcase == 'y'
     print 'Enter student classroom: '
     classroom = gets.chomp
-    # Additional code here to create the student object and add it to the people array
+    @people.push(Student.new(classroom: classroom, age: age, name: name, parent_permission: parent_permission))
+    puts 'Student created successfully'
   end
 
   def create_teacher
