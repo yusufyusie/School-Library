@@ -99,8 +99,7 @@ class App
     id = gets.chomp.to_i
     puts 'Rentals:'
     @rentals.each do |rental|
-      if rental.person.id == id
-        puts "Date: #{rental.date}, Book: \"#{rental.book.title}\" by #{rental.book.author}"
+        puts "Date: #{rental.date}, Book: \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id
       end
     end
     @menu.show_menu
