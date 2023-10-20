@@ -32,8 +32,9 @@ class App
     parent_permission = gets.chomp.downcase == 'y'
     print 'Enter student classroom: '
     classroom = gets.chomp
-    @people.push(Student.new(classroom: classroom, age: age, name: name, parent_permission: parent_permission))
+    @people.push(Student.new(name: name, age: age, parent_permission: parent_permission, classroom: classroom))
     puts 'Student created successfully'
+    @menu.show_menu
   end
 
   def create_teacher
@@ -43,9 +44,9 @@ class App
     name = gets.chomp
     print 'Enter the specialization of the teacher: '
     specialization = gets.chomp
-    @people.push(Teacher.new(specialization, age, name: name))
-    puts
+    @people.push(Teacher.new(name: name, age: age, specialization: specialization))
     puts 'Teacher created successfully'
+    @menu.show_menu
   end
 
   def create_person

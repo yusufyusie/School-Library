@@ -32,7 +32,7 @@ class Menu
     }
     selected_option = menu_options[user_input]
     if selected_option.nil?
-      puts 'Invalid option selected!'
+      puts 'Invalid option selected! Please enter a number from 1 to 7.'
     else
       @app.send(selected_option)
     end
